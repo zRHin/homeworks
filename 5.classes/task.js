@@ -74,14 +74,9 @@ class Library {
             let  arr = this.books[i];
             if (arr[type] === value) {
                 return this.books[i];
-            } else {
-                if (i < (this.books.length - 1)) {
-                    continue;
-                } else {
-                    return null;
-                }
             }
         }
+        return null;
     }
     giveBookByName(bookName) {
         for (const i in this.books) {
@@ -90,13 +85,8 @@ class Library {
                 obj = this.books[i];
                 this.books.splice(i, 1);
                 return obj;
-            } else {
-                if (i < (this.books.length - 1)) {
-                    continue;
-                } else {
-                    return null;
-                }
             }
         }
+        return null;
     }
 }
